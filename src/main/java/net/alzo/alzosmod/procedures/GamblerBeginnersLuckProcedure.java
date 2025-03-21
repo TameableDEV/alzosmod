@@ -88,7 +88,7 @@ public class GamblerBeginnersLuckProcedure {
 			} else if (PositiveEffectRoll2 <= 6) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 36000, 1, true, false));
-			} else if (PositiveEffectRoll1 <= 7) {
+			} else if (PositiveEffectRoll2 <= 7) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 36000, 2, true, false));
 			} else if (PositiveEffectRoll2 <= 8) {
@@ -100,6 +100,68 @@ public class GamblerBeginnersLuckProcedure {
 			} else if (PositiveEffectRoll2 <= 10) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 36000, 3, true, false));
+			}
+			if (NegativeEffectRoll1 <= 1) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 36000, 5, true, false));
+			} else if (NegativeEffectRoll1 <= 2) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 36000, 2, true, false));
+			} else if (NegativeEffectRoll1 <= 3) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 36000, 4, true, false));
+			} else if (NegativeEffectRoll1 <= 4) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 36000, 2, false, false));
+			} else if (NegativeEffectRoll1 <= 5) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 36000, 3, true, false));
+			} else if (NegativeEffectRoll1 <= 6) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 36000, 5, true, false));
+			} else if (NegativeEffectRoll1 <= 7) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 36000, 2, true, false));
+			} else if (NegativeEffectRoll1 <= 8) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 36000, 3, true, false));
+			} else if (NegativeEffectRoll1 <= 9) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 36000, 1, true, false));
+			} else if (NegativeEffectRoll1 <= 10) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 36000, 3, true, false));
+			}
+			if (NegativeEffectRoll2 <= 1) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.BAD_OMEN, 36000, 5, true, false));
+			} else if (NegativeEffectRoll2 <= 2) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 36000, 2, true, false));
+			} else if (NegativeEffectRoll2 <= 3) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 36000, 4, true, false));
+			} else if (NegativeEffectRoll2 <= 4) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 36000, 2, false, false));
+			} else if (NegativeEffectRoll2 <= 5) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 36000, 3, true, false));
+			} else if (NegativeEffectRoll2 <= 6) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 36000, 5, true, false));
+			} else if (NegativeEffectRoll2 <= 7) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 36000, 2, true, false));
+			} else if (NegativeEffectRoll2 <= 8) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 36000, 3, true, false));
+			} else if (NegativeEffectRoll2 <= 9) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 36000, 1, true, false));
+			} else if (NegativeEffectRoll2 <= 10) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 36000, 3, true, false));
 			}
 		}
 	}

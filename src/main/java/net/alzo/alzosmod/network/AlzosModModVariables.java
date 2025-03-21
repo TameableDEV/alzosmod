@@ -67,6 +67,7 @@ public class AlzosModModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.PlayerOrigin = original.PlayerOrigin;
+			clone.GamblerLuckMultpler = original.GamblerLuckMultpler;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -103,7 +104,8 @@ public class AlzosModModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double PlayerOrigin = 0;
+		public double PlayerOrigin = 0.0;
+		public double GamblerLuckMultpler = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -113,12 +115,14 @@ public class AlzosModModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putDouble("PlayerOrigin", PlayerOrigin);
+			nbt.putDouble("GamblerLuckMultpler", GamblerLuckMultpler);
 			return nbt;
 		}
 
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
 			PlayerOrigin = nbt.getDouble("PlayerOrigin");
+			GamblerLuckMultpler = nbt.getDouble("GamblerLuckMultpler");
 		}
 	}
 
@@ -144,6 +148,7 @@ public class AlzosModModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.PlayerOrigin = message.data.PlayerOrigin;
+					variables.GamblerLuckMultpler = message.data.GamblerLuckMultpler;
 				}
 			});
 			context.setPacketHandled(true);
