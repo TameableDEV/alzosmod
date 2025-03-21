@@ -20,14 +20,14 @@ public class HeavyAttackCooldownProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("mod:primary") == false) {
-			entity.getPersistentData().putBoolean("mod:primary", true);
+		if (entity.getPersistentData().getBoolean("primary") == false) {
+			entity.getPersistentData().putBoolean("primary", true);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 4, false, false));
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal("Heavy Hit: Activated!"), false);
 			AlzosModMod.queueServerWork(800, () -> {
-				entity.getPersistentData().putBoolean("mod:primary", false);
+				entity.getPersistentData().putBoolean("primary", false);
 			});
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
