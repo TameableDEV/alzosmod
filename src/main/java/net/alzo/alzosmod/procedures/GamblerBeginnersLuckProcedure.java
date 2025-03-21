@@ -30,25 +30,76 @@ public class GamblerBeginnersLuckProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		double PositiveEffectRoll1 = 0;
+		double NegativeEffectRoll1 = 0;
+		double PositiveEffectRoll2 = 0;
+		double NegativeEffectRoll2 = 0;
 		if ((entity.getCapability(AlzosModModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AlzosModModVariables.PlayerVariables())).PlayerOrigin == 1) {
-			if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 1) {
+			PositiveEffectRoll1 = Mth.nextDouble(RandomSource.create(), 1, 10);
+			PositiveEffectRoll2 = Mth.nextDouble(RandomSource.create(), 1, 10);
+			NegativeEffectRoll1 = Mth.nextDouble(RandomSource.create(), 1, 10);
+			NegativeEffectRoll2 = Mth.nextDouble(RandomSource.create(), 1, 10);
+			if (PositiveEffectRoll1 <= 1) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 36000, 5, false, false));
-			} else if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 2) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 36000, 5, true, false));
+			} else if (PositiveEffectRoll1 <= 2) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 36000, 2, false, false));
-			} else if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 3) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 36000, 2, true, false));
+			} else if (PositiveEffectRoll1 <= 3) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 36000, 5, false, false));
-			} else if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 4) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 36000, 4, true, false));
+			} else if (PositiveEffectRoll1 <= 4) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 36000, 3, false, false));
-			} else if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 5) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 36000, 2, false, false));
+			} else if (PositiveEffectRoll1 <= 5) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 36000, 3, false, false));
-			} else if (Mth.nextDouble(RandomSource.create(), 1, 6) <= 6) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 36000, 3, true, false));
+			} else if (PositiveEffectRoll1 <= 6) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 36000, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 36000, 1, true, false));
+			} else if (PositiveEffectRoll1 <= 7) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 36000, 2, true, false));
+			} else if (PositiveEffectRoll1 <= 8) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 36000, 1, true, false));
+			} else if (PositiveEffectRoll1 <= 9) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 36000, 1, true, false));
+			} else if (PositiveEffectRoll1 <= 10) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 36000, 3, true, false));
+			}
+			if (PositiveEffectRoll2 <= 1) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 36000, 5, true, false));
+			} else if (PositiveEffectRoll2 <= 2) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 36000, 2, true, false));
+			} else if (PositiveEffectRoll2 <= 3) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 36000, 4, true, false));
+			} else if (PositiveEffectRoll2 <= 4) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 36000, 2, true, false));
+			} else if (PositiveEffectRoll2 <= 5) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 36000, 3, true, false));
+			} else if (PositiveEffectRoll2 <= 6) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 36000, 1, true, false));
+			} else if (PositiveEffectRoll1 <= 7) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 36000, 2, true, false));
+			} else if (PositiveEffectRoll2 <= 8) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 36000, 1, true, false));
+			} else if (PositiveEffectRoll2 <= 9) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 36000, 1, true, false));
+			} else if (PositiveEffectRoll2 <= 10) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 36000, 3, true, false));
 			}
 		}
 	}
