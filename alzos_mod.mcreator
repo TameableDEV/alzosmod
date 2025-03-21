@@ -1,5 +1,20 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "GamblersOriginMain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamblers_origin_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/GamblersOriginMainProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Origins Stuff/Gambling"
+    }
+  ],
   "variable_elements": [
     {
       "name": "PlayerOrigin",
