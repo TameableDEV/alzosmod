@@ -1,19 +1,5 @@
 {
-  "mod_elements": [
-    {
-      "name": "Tes",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tes",
-      "metadata": {
-        "files": [
-          "src/main/java/net/alzo/alzosmod/procedures/TesProcedure.java"
-        ],
-        "dependencies": []
-      }
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
