@@ -1,5 +1,20 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "MainLineGambler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_line_gambler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/MainLineGamblerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Origins/Gamblers"
+    }
+  ],
   "variable_elements": [
     {
       "name": "PlayerOrigin",
@@ -16,7 +31,17 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Origins",
+        "children": [
+          {
+            "name": "Gamblers",
+            "children": []
+          }
+        ]
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "alzos_mod",
