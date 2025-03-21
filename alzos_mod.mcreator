@@ -51,6 +51,106 @@
         ]
       },
       "path": "~/Origins/Gamblers"
+    },
+    {
+      "name": "PrimaryAbility",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "primary_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/network/PrimaryAbilityMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "HeavyAttackCooldown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_attack_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/HeavyAttackCooldownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Origins/Heavy"
+    },
+    {
+      "name": "HeavyClassSettings",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_class_settings",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/HeavyClassSettingsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Origins/Heavy"
+    },
+    {
+      "name": "HeavyCoinRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_coin_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/HeavyCoinRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Origins/Heavy"
+    },
+    {
+      "name": "HeavyCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heavy_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/alzos_mod/models/item/heavy_coin.json",
+          "src/main/java/net/alzo/alzosmod/item/HeavyCoinItem.java"
+        ]
+      },
+      "path": "~/Origins/Heavy"
     }
   ],
   "variable_elements": [
@@ -68,12 +168,17 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ENTITIES:mod:primary": []
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
+      "item.alzos_mod.heavy_coin": "Heavy Coin",
       "item.alzos_mod.gamblers_token.description_0": "This Is A Dev Item, allows the Player to select Gambler",
-      "item.alzos_mod.gamblers_token": "Gamblers Token"
+      "key.alzos_mod.primary_ability": "Primary Ability",
+      "item.alzos_mod.gamblers_token": "Gamblers Token",
+      "item.alzos_mod.heavy_coin.description_0": "Allows the Player to turn into the heavy class"
     }
   },
   "foldersRoot": {
@@ -85,8 +190,16 @@
           {
             "name": "Gamblers",
             "children": []
+          },
+          {
+            "name": "Heavy",
+            "children": []
           }
         ]
+      },
+      {
+        "name": "Keybinds",
+        "children": []
       }
     ]
   },

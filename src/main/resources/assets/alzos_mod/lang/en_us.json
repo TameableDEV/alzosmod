@@ -1,4 +1,7 @@
 {
+  "item.alzos_mod.heavy_coin": "Heavy Coin",
   "item.alzos_mod.gamblers_token.description_0": "This Is A Dev Item, allows the Player to select Gambler",
-  "item.alzos_mod.gamblers_token": "Gamblers Token"
+  "key.alzos_mod.primary_ability": "Primary Ability",
+  "item.alzos_mod.gamblers_token": "Gamblers Token",
+  "item.alzos_mod.heavy_coin.description_0": "Allows the Player to turn into the heavy class"
 }
