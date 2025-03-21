@@ -1,14 +1,14 @@
 {
   "mod_elements": [
     {
-      "name": "MainLineGambler",
+      "name": "GamblerClassSetting",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "main_line_gambler",
+      "registry_name": "gambler_class_setting",
       "metadata": {
         "files": [
-          "src/main/java/net/alzo/alzosmod/procedures/MainLineGamblerProcedure.java"
+          "src/main/java/net/alzo/alzosmod/procedures/GamblerClassSettingProcedure.java"
         ],
         "dependencies": []
       },

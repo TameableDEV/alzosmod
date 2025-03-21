@@ -1,6 +1,6 @@
 package net.alzo.alzosmod.procedures;
 
-public class MainLineGamblerProcedure {
+public class GamblerClassSettingProcedure {
 	public static void execute() {
 	}
 }
