@@ -10,7 +10,45 @@
         "files": [
           "src/main/java/net/alzo/alzosmod/procedures/GamblerClassSettingProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Origins/Gamblers"
+    },
+    {
+      "name": "GamblersTokenRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamblers_token_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/GamblersTokenRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Origins/Gamblers"
+    },
+    {
+      "name": "GamblersToken",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamblers_token",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/alzos_mod/models/item/gamblers_token.json",
+          "src/main/java/net/alzo/alzosmod/item/GamblersTokenItem.java"
+        ]
       },
       "path": "~/Origins/Gamblers"
     }
@@ -27,7 +65,10 @@
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.alzos_mod.gamblers_token.description_0": "This Is A Dev Item, allows the Player to select Gambler",
+      "item.alzos_mod.gamblers_token": "Gamblers Token"
+    }
   },
   "foldersRoot": {
     "name": "~",
