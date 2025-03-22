@@ -151,6 +151,93 @@
         ]
       },
       "path": "~/Origins/Heavy"
+    },
+    {
+      "name": "PrimaryAbilityOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "primary_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/PrimaryAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ExplosionsInsurrance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosions_insurrance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/alzo/alzosmod/procedures/ExplosionsInsurranceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Origins/Gamblers"
+    },
+    {
+      "name": "RiggedLiability",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rigged_liability",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/alzos_mod/damage_type/rigged_liability.json"
+        ]
+      },
+      "path": "~/Origins/Gamblers"
     }
   ],
   "variable_elements": [
@@ -175,10 +262,13 @@
   "language_map": {
     "en_us": {
       "item.alzos_mod.heavy_coin": "Heavy Coin",
+      "death.attack.rigged_liability.item": "%2$s Rigged the liability of %1$s",
       "item.alzos_mod.gamblers_token.description_0": "This Is A Dev Item, allows the Player to select Gambler",
+      "death.attack.rigged_liability.player": "So this death message shouldn\u0027t appear... so um Hello...! also Fun Fact: Rigged Liability\u0027s name is actually an a Badge from the Roblox game: Item Asylum. you have to shoot 3 live rounds in a row without racking or reloading while one blank is loaded!",
       "key.alzos_mod.primary_ability": "Primary Ability",
       "item.alzos_mod.gamblers_token": "Gamblers Token",
-      "item.alzos_mod.heavy_coin.description_0": "Allows the Player to turn into the heavy class"
+      "item.alzos_mod.heavy_coin.description_0": "Allows the Player to turn into the heavy class",
+      "death.attack.rigged_liability": "%1$s had Rigged Liability"
     }
   },
   "foldersRoot": {

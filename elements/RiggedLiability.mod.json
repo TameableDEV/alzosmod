@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s had Rigged Liability",
+    "itemDeathMessage": "%2$s Rigged the liability of %1$s",
+    "playerDeathMessage": "So this death message shouldn't appear... so um Hello...! also Fun Fact: Rigged Liability's name is actually an a Badge from the Roblox game: Item Asylum. you have to shoot 3 live rounds in a row without racking or reloading while one blank is loaded!"
+  }
+}

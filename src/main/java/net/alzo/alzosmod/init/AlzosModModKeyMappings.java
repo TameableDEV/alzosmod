@@ -15,9 +15,24 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.alzo.alzosmod.network.PrimaryAbilityMessage;
+import net.alzo.alzosmod.AlzosModMod;
+
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class AlzosModModKeyMappings {
-	public static final KeyMapping PRIMARY_ABILITY = new KeyMapping("key.alzos_mod.primary_ability", GLFW.GLFW_KEY_UNKNOWN, "key.categories.gameplay");
+	public static final KeyMapping PRIMARY_ABILITY = new KeyMapping("key.alzos_mod.primary_ability", GLFW.GLFW_KEY_UNKNOWN, "key.categories.gameplay") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				AlzosModMod.PACKET_HANDLER.sendToServer(new PrimaryAbilityMessage(0, 0));
+				PrimaryAbilityMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -29,6 +44,7 @@ public class AlzosModModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
+				PRIMARY_ABILITY.consumeClick();
 			}
 		}
 	}
